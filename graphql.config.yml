@@ -1,0 +1,14 @@
+documents: '**/*.graphql'
+schema:
+  - ${REACT_APP_PATH_API}
+schemaPath:
+  - ./schema.graphql
+extensions:
+  codegen:
+    generates:
+      ./schema.graphql:
+        - schema-ast
+      ./src/common/types/generated-types.tsx:
+        plugins:
+          - typescript
+          - typescript-operations
