@@ -18,6 +18,18 @@
 .env.test.local
 .env.production.local
 
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# ENV secret keys. TO DO: uncomment when ready to be release
+#.env
