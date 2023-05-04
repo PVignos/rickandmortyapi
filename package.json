@@ -11,8 +11,10 @@
     "@types/node": "^16.18.25",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.1",
+    "bootstrap": "^5.2.3",
     "graphql": "^16.6.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.10",
@@ -21,11 +23,11 @@
   },
   "devDependencies": {
     "@graphql-codegen/cli": "3.3.1",
+    "@graphql-codegen/client-preset": "3.0.1",
+    "@graphql-codegen/introspection": "3.0.1",
     "@graphql-codegen/typescript": "^3.0.4",
     "@graphql-codegen/typescript-resolvers": "^3.2.1",
-    "@types/styled-components": "^5.1.26",
-    "@graphql-codegen/introspection": "3.0.1",
-    "@graphql-codegen/client-preset": "3.0.1"
+    "@types/styled-components": "^5.1.26"
   },
   "scripts": {
     "start": "react-scripts start",
