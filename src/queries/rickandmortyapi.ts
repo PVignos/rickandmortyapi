@@ -15,7 +15,26 @@ const GET_ALL_CHARACTERS = gql`
                 image
                 status
                 species
+                origin {
+                    id
+                    name
+                    dimension
+                    type
+                    residents {
+                        id
+                    }
+                }
                 location {
+                    id
+                    name
+                    dimension
+                    type
+                    residents {
+                        id
+                    }
+                }
+                episode {
+                    id
                     name
                 }
             }
