@@ -27,7 +27,8 @@
     "@graphql-codegen/introspection": "3.0.1",
     "@graphql-codegen/typescript": "^3.0.4",
     "@graphql-codegen/typescript-resolvers": "^3.2.1",
-    "@types/styled-components": "^5.1.26"
+    "@types/styled-components": "^5.1.26",
+    "graphql-codegen": "^0.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
