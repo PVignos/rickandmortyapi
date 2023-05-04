@@ -1,39 +1,17 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
-import { GET_ALL_CHARACTERS } from './queries/rickandmortyapi';
-import Card from './components/Card/Card';
+import React  from 'react';
+import Header from './components/Header/Header';
+import Panel from './components/Panel/Panel';
+import { Container, Row } from 'react-bootstrap';
 
-const App = () => {
-  const {loading, error, data} = useQuery(GET_ALL_CHARACTERS, {
-    variables: { page: 1 }
-  });
-
-  // if (loading) return <p>Loading...</p>;
-  // if (error) return <p>Error {error.message}</p>;
-  return (
-    <>
-      <header>
-        <h1>Rick and Morty</h1>
-      </header>
-      <div className="content">
-
-        <div className="cards">
-          {loading ?
-            (
-              <p>Loading...</p>
-            ) :
-            error ?
-              (
-                <p>Sorry try later.</p>
-              ) :
-              data?.characters?.results.map((character: any) =>
-                <Card character={character} key={character.id}/>
-              )
-          }
-        </div>
-      </div>
-    </>
-  );
-};
+const App = () => (
+  <div className="App">
+    <Header />
+    <Container>
+      <Row className="py-3">
+        <Panel/>
+      </Row>
+    </Container>
+  </div>
+);
 
 export default App;
