@@ -42,6 +42,13 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+### `npm run codegen`
+
+Thanks to [graphql-codegen](https://www.npmjs.com/package/graphql-codegen) you can generate client code based on a GraphQL schema and query documents.
+Very useful when working with APIs that change over time.
+
+Check out configuration file on [./codegen.ts](./codegen.ts)
+
 ## UI Kit
 
 Project includes Bootstrap UI kit. You can follow the documentation [here](https://react-bootstrap.netlify.app/).
