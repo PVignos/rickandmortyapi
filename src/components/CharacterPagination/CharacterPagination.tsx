@@ -1,6 +1,6 @@
-import React, { FC, ReactElement } from 'react';
-import { getAdjacentPages } from '../../utils/getAdjacentPages';
-import { Pagination, Row } from 'react-bootstrap';
+import React, { FC, ReactElement } from "react";
+import { getAdjacentPages } from "../../utils/getAdjacentPages";
+import { Pagination, Row } from "react-bootstrap";
 
 interface CharacterPaginationProps {
   pages: any,

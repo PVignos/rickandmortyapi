@@ -1,6 +1,6 @@
-import React from 'react';
-import { HeaderWrapper } from './Header.styled';
-import { Col, Container, Nav, Row } from 'react-bootstrap';
+import React from "react";
+import { HeaderWrapper } from "./Header.styled";
+import { Col, Container, Nav, Row } from "react-bootstrap";
 
 const Header: React.FC = () => {
   return (

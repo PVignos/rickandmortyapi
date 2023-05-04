@@ -1,7 +1,7 @@
-import React  from 'react';
-import Header from './components/Header/Header';
-import Panel from './components/Panel/Panel';
-import { Container, Row } from 'react-bootstrap';
+import React  from "react";
+import Header from "./components/Header/Header";
+import Panel from "./components/Panel/Panel";
+import { Container, Row } from "react-bootstrap";
 
 const App = () => (
   <div className="App">

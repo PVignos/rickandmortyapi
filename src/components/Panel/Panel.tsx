@@ -1,11 +1,11 @@
-import React, { FC, useState } from 'react';
-import { PanelWrapper } from './Panel.styled';
-import { useQuery } from '@apollo/client';
-import { GET_ALL_CHARACTERS } from '../../queries/rickandmortyapi';
-import { Character, Episode } from '../../gql/graphql';
-import { Button, ListGroup, Modal, Row, Spinner } from 'react-bootstrap';
-import CharacterCard from '../CharacterCard/CharacterCard';
-import CharacterPagination from '../CharacterPagination/CharacterPagination';
+import React, { FC, useState } from "react";
+import { PanelWrapper } from "./Panel.styled";
+import { useQuery } from "@apollo/client";
+import { GET_ALL_CHARACTERS } from "../../queries/rickandmortyapi";
+import { Character, Episode } from "../../gql/graphql";
+import { Button, ListGroup, Modal, Row, Spinner } from "react-bootstrap";
+import CharacterCard from "../CharacterCard/CharacterCard";
+import CharacterPagination from "../CharacterPagination/CharacterPagination";
 
 const Panel: FC = () => {
   const [page, setPage] = useState(1);
@@ -30,7 +30,7 @@ const Panel: FC = () => {
     <PanelWrapper>
       {loading ?
         (
-          <Row className="justify-content-md-center p-5"><Spinner animation="border" variant="secondary" /></Row>
+          <Row className="justify-content-md-center p-5"><Spinner data-testid="Spinner" animation="border" variant="secondary" /></Row>
         ) :
         error ?
           (
