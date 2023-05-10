@@ -3,12 +3,12 @@ import { getAdjacentPages } from "../../utils/getAdjacentPages";
 import { Pagination, Row } from "react-bootstrap";
 
 interface CharacterPaginationProps {
-  pages: any,
+  pages: number,
   currentPage: number,
-  setPage: (page: number) => void
+  handlePageChange: (page: number) => void
 }
 
-const CharacterPagination: FC<CharacterPaginationProps> = ({pages, currentPage, setPage}) => {
+const CharacterPagination: FC<CharacterPaginationProps> = ({pages, currentPage, handlePageChange}) => {
   let items: ReactElement[] = [];
   const adjacentPages = getAdjacentPages(currentPage, pages, 2);
 
@@ -17,7 +17,7 @@ const CharacterPagination: FC<CharacterPaginationProps> = ({pages, currentPage, 
       <Pagination.Item
         key={n}
         active={n === currentPage}
-        onClick={() => setPage(n)}
+        onClick={() => handlePageChange(n)}
         title={`Go to page ${n}`}
       >{n}</Pagination.Item>
     );
@@ -26,11 +26,11 @@ const CharacterPagination: FC<CharacterPaginationProps> = ({pages, currentPage, 
   return (
     <Row>
       <Pagination className="justify-content-md-center">
-        <Pagination.First disabled={currentPage === 1} onClick={()=>setPage(1)} title="First page" />
-        <Pagination.Prev disabled={currentPage === 1} onClick={()=>setPage(currentPage - 1)} title="Prev page" />
+        <Pagination.First disabled={currentPage === 1} onClick={()=>handlePageChange(1)} title="First page" />
+        <Pagination.Prev disabled={currentPage === 1} onClick={()=>handlePageChange(currentPage - 1)} title="Prev page" />
         {items}
-        <Pagination.Next disabled={currentPage === pages} onClick={()=>setPage(currentPage + 1)} title="Next page" />
-        <Pagination.Last disabled={currentPage === pages} onClick={()=>setPage(pages)} title="Last page" />
+        <Pagination.Next disabled={currentPage === pages} onClick={()=>handlePageChange(currentPage + 1)} title="Next page" />
+        <Pagination.Last disabled={currentPage === pages} onClick={()=>handlePageChange(pages)} title="Last page" />
       </Pagination>
     </Row>
   )
